@@ -1,4 +1,7 @@
+import { MantineProvider } from "@mantine/core";
 import type { Preview } from "@storybook/nextjs-vite";
+import type { ReactRenderer } from "@storybook/react";
+import "@mantine/core/styles.css";
 
 const preview: Preview = {
   parameters: {
@@ -16,6 +19,13 @@ const preview: Preview = {
       test: "todo",
     },
   },
+  decorators: [
+    (Story) => (
+      <MantineProvider>
+        <Story />
+      </MantineProvider>
+    ),
+  ],
 };
 
 export default preview;
