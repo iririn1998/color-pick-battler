@@ -2,12 +2,18 @@
   "name": "color-pick-battler",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "docs"
+  ],
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "biome check",
-    "format": "biome format --write"
+    "format": "biome format --write",
+    "docs:start": "npm run start --workspace=docs",
+    "docs:build": "npm run build --workspace=docs",
+    "docs:dev": "npm run start --workspace=docs"
   },
   "dependencies": {
     "react": "19.1.0",
