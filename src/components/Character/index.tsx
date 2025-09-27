@@ -2,7 +2,7 @@ import type { FC } from "react";
 import styles from "./index.module.css";
 
 export type CharacterProps = {
-    /* キャラクターの画像パス */
+  /* キャラクターの画像パス */
   src: string;
   /* 画像のサイズ */
   size: number;
@@ -10,14 +10,14 @@ export type CharacterProps = {
   split: number;
   /* アニメーション速度（ms）、数字が大きいほどアニメーションが遅くなる */
   speed: number;
-}
+};
 
 export const Character: FC<CharacterProps> = ({ src, size, split, speed }) => {
   // 総アニメーション時間（フレーム数 × 速度）
   const totalDuration = 4 * speed; // [0,1,2,1] = 4フレーム
 
   return (
-    <div 
+    <div
       className={styles.character}
       style={{
         width: size,
@@ -26,15 +26,17 @@ export const Character: FC<CharacterProps> = ({ src, size, split, speed }) => {
     >
       <div
         className={styles.sprite}
-        style={{
-          backgroundImage: `url(${src})`,
-          backgroundSize: `${size * split}px ${size}px`,
-          width: size,
-          height: size,
-          animationDuration: `${totalDuration}ms`,
-          '--frame-size': `${size}px`,
-        } as React.CSSProperties & { '--frame-size': string }}
+        style={
+          {
+            backgroundImage: `url(${src})`,
+            backgroundSize: `${size * split}px ${size}px`,
+            width: size,
+            height: size,
+            animationDuration: `${totalDuration}ms`,
+            "--frame-size": `${size}px`,
+          } as React.CSSProperties & { "--frame-size": string }
+        }
       />
     </div>
   );
-}
+};
