@@ -25,9 +25,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install docs dependencies
-        run: npm ci --workspace=docs
-
       - name: Run Biome checks
         run: npm run biome
 
