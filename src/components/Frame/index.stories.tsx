@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Frame } from "./index";
+import { Text } from "@mantine/core";
 
 const meta: Meta<typeof Frame> = {
   title: "Components/Frame",
@@ -22,6 +23,6 @@ type Story = StoryObj<typeof meta>;
 // 基本的なフレーム
 export const Default: Story = {
   args: {
-    children: "フレーム内のコンテンツです",
+    children: <Text size="xl">フレームコンテンツ</Text>,
   },
 };
