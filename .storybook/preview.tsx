@@ -1,7 +1,8 @@
 import { MantineProvider } from "@mantine/core";
 import type { Preview } from "@storybook/nextjs-vite";
-import type { ReactRenderer } from "@storybook/react";
 import "@mantine/core/styles.css";
+// biome-ignore lint/correctness/noUnusedImports: エラー回避いずれ直す
+import React from "react";
 
 const preview: Preview = {
   parameters: {
