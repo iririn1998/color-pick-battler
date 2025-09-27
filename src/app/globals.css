@@ -2,12 +2,4 @@
 @font-face {
   font-family: 'DonguriDuel';
   src: url('/fonts/x10y12pxDonguriDuel.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* デフォルトフォントの設定 */
-* {
-  font-family: 'DonguriDuel', monospace, sans-serif;
 }
