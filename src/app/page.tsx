@@ -1,26 +1,16 @@
-import { Button, Card, Container, Group, Text, Title } from "@mantine/core";
+import { Button, Stack } from "@mantine/core";
+import Link from "next/link";
+import { Text } from "@/components/Text";
 
-export default function Home() {
+const Home = () => {
   return (
-    <Container size="md" py="xl">
-      <Title order={1} mb="md">
-        Color Pick Battler
-      </Title>
-      <Text mb="lg">Mantineのスタイルが適用されているかテストします。</Text>
-
-      <Card shadow="sm" padding="lg" radius="md" withBorder>
-        <Group justify="space-between" mt="md" mb="xs">
-          <Text fw={500}>テストカード</Text>
-        </Group>
-
-        <Text size="sm" c="dimmed">
-          このカードとボタンが正しくスタイリングされていれば、Mantineの設定は成功です。
-        </Text>
-
-        <Button fullWidth mt="md" radius="md" variant="filled">
-          Mantineボタン
-        </Button>
-      </Card>
-    </Container>
+    <Stack>
+      <Text size="xl">ここはタイトルがめんです</Text>
+      <Button component={Link} href="/menu" color="green">
+        <Text>メニュー</Text>
+      </Button>
+    </Stack>
   );
-}
+};
+
+export default Home;

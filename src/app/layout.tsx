@@ -1,22 +1,15 @@
 import {
   ColorSchemeScript,
+  Container,
   MantineProvider,
   mantineHtmlProps,
+  Stack,
 } from "@mantine/core";
+import { Frame } from "@/components/Frame";
 import "@mantine/core/styles.css";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { Text } from "@/components/Text";
 
 const donguriDuel = localFont({
   src: "../assets/fonts/x10y12pxDonguriDuel.ttf",
@@ -39,10 +32,15 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${donguriDuel.variable}`}
-      >
-        <MantineProvider>{children}</MantineProvider>
+      <body className={`${donguriDuel.variable}`}>
+        <MantineProvider>
+          <Container size="md" py="xl">
+            <Stack align="center" gap="xl">
+              <Frame>{children}</Frame>
+              <Text size="md">@2025 Color Pick Battler</Text>
+            </Stack>
+          </Container>
+        </MantineProvider>
       </body>
     </html>
   );

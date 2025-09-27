@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   plugins: {
     "postcss-simple-vars": {
       variables: {
@@ -12,3 +12,5 @@ module.exports = {
     "postcss-preset-mantine": {},
   },
 };
+
+export default config;
