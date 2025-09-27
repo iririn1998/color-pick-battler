@@ -39,7 +39,7 @@ jobs:
         run: npm ci --workspace=docs
 
       - name: Build website
-        run: npm run build --workspace=docs
+        run: npm run docs:build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
