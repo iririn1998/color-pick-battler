@@ -1,6 +1,7 @@
 import { MantineProvider } from "@mantine/core";
 import type { Preview } from "@storybook/nextjs-vite";
 import "@mantine/core/styles.css";
+import "./fonts.css";
 // biome-ignore lint/correctness/noUnusedImports: エラー回避いずれ直す
 import React from "react";
 
