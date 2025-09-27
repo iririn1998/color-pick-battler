@@ -1,6 +1,6 @@
+import { Text } from "@mantine/core";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Frame } from "./index";
-import { Text } from "@mantine/core";
 
 const meta: Meta<typeof Frame> = {
   title: "Components/Frame",

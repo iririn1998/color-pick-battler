@@ -39,7 +39,9 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} ${donguriDuel.variable}`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${donguriDuel.variable}`}
+      >
         <MantineProvider>{children}</MantineProvider>
       </body>
     </html>
