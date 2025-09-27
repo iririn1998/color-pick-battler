@@ -6,15 +6,13 @@ export type CharacterProps = {
   src: string;
   /* 画像のサイズ */
   size: number;
-  /* 分割画像のサイズ */
-  splitSize: number;
   /* 分割数 */
   split: number;
   /* アニメーション速度（ms）、数字が大きいほどアニメーションが遅くなる */
   speed: number;
 }
 
-export const Character: FC<CharacterProps> = ({ src, size, splitSize, split, speed }) => {
+export const Character: FC<CharacterProps> = ({ src, size, split, speed }) => {
   // 総アニメーション時間（フレーム数 × 速度）
   const totalDuration = 4 * speed; // [0,1,2,1] = 4フレーム
 
@@ -30,11 +28,11 @@ export const Character: FC<CharacterProps> = ({ src, size, splitSize, split, spe
         className={styles.sprite}
         style={{
           backgroundImage: `url(${src})`,
-          backgroundSize: `${splitSize * split}px ${splitSize}px`,
-          width: splitSize,
-          height: splitSize,
+          backgroundSize: `${size * split}px ${size}px`,
+          width: size,
+          height: size,
           animationDuration: `${totalDuration}ms`,
-          '--frame-size': `${splitSize}px`,
+          '--frame-size': `${size}px`,
         } as React.CSSProperties & { '--frame-size': string }}
       />
     </div>

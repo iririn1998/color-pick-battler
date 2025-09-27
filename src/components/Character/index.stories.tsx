@@ -39,7 +39,15 @@ export const Enemy1: Story = {
   args: {
     src: "/img/enemy_1.png",
     size: 64,
-    splitSize: 64,
+    split: 3,
+    speed: 200,
+  },
+};
+
+export const EnemyBoss: Story = {
+  args: {
+    src: "/img/enemy_boss_1.png",
+    size: 256,
     split: 3,
     speed: 200,
   },
