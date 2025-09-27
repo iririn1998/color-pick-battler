@@ -1,0 +1,12 @@
+/* Storybook用のフォント設定 */
+@font-face {
+  font-family: "DonguriDuel";
+  src: url("/fonts/x10y12pxDonguriDuel.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-donguri-duel: "DonguriDuel", monospace, sans-serif;
+}

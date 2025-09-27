@@ -6,7 +6,7 @@ import {
 import "@mantine/core/styles.css";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import localFont from "next/font/local";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,6 +16,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const donguriDuel = localFont({
+  src: "../assets/fonts/x10y12pxDonguriDuel.ttf",
+  variable: "--font-donguri-duel",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -33,7 +39,9 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${donguriDuel.variable}`}
+      >
         <MantineProvider>{children}</MantineProvider>
       </body>
     </html>
