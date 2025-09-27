@@ -1,0 +1,28 @@
+.character {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.sprite {
+  background-repeat: no-repeat;
+  image-rendering: pixelated; /* ピクセルアートのためのシャープなレンダリング */
+  animation: spriteAnimation infinite steps(1);
+}
+
+@keyframes spriteAnimation {
+  0% {
+    background-position: 0 0; /* フレーム 0 */
+  }
+  25% {
+    background-position: calc(-1 * var(--frame-size)) 0; /* フレーム 1 */
+  }
+  50% {
+    background-position: calc(-2 * var(--frame-size)) 0; /* フレーム 2 */
+  }
+  75% {
+    background-position: calc(-1 * var(--frame-size)) 0; /* フレーム 1 */
+  }
+  100% {
+    background-position: 0 0; /* フレーム 0 に戻る */
+  }
+}
