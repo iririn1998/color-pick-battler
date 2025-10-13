@@ -1,0 +1,56 @@
+/* 色変数の定義 */
+:root {
+  --title-text-color: white;
+  --title-shadow-color: rgba(0, 0, 0, 0.8);
+  --title-glow-light: rgba(255, 255, 255, 0.5);
+  --title-glow-medium: rgba(255, 255, 255, 0.3);
+  --title-glow-strong: rgba(255, 255, 255, 0.8);
+  --title-glow-bright: rgba(255, 255, 255, 0.5);
+}
+
+/* タイトルアニメーション */
+.titleContainer {
+  margin-bottom: 3rem;
+}
+
+.animatedTitle {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--title-text-color);
+  text-shadow: 3px 3px 0px var(--title-shadow-color);
+  animation: titleAnimation 3s ease-in-out infinite;
+  font-family: var(--font-donguri-duel);
+}
+
+@keyframes titleAnimation {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+/* タイトル点滅効果 */
+.titleGlow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow:
+      3px 3px 0px var(--title-shadow-color),
+      0 0 10px var(--title-glow-light),
+      0 0 20px var(--title-glow-medium);
+  }
+  to {
+    text-shadow:
+      3px 3px 0px var(--title-shadow-color),
+      0 0 20px var(--title-glow-strong),
+      0 0 30px var(--title-glow-bright);
+  }
+}
