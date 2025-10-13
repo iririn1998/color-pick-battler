@@ -1,3 +1,4 @@
+import { Text } from "@mantine/core";
 import type { FC } from "react";
 import styles from "./index.module.css";
 
@@ -8,9 +9,9 @@ export type AnimatedTitleProps = {
 export const AnimatedTitle: FC<AnimatedTitleProps> = ({ children }) => {
   return (
     <div className={styles.titleContainer}>
-      <div className={`${styles.animatedTitle} ${styles.titleGlow}`}>
+      <Text className={`${styles.animatedTitle} ${styles.titleGlow}`}>
         {children}
-      </div>
+      </Text>
     </div>
   );
 };
