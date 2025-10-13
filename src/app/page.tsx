@@ -17,7 +17,7 @@ const Home: FC = () => {
           size="lg"
           fullWidth
         >
-          <Text>ステージ選択</Text>
+          <Text>ステージセレクト</Text>
         </Button>
         <Button component={Link} href="/menu" color="green" size="lg" fullWidth>
           <Text>メニュー</Text>
