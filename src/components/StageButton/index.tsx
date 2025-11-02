@@ -44,7 +44,7 @@ export const StageButton: FC<StageButtonProps> = ({
           </>
         ) : (
           <>
-            <Text size="2xl" fw="bold" className={styles["stage-number"]}>
+            <Text size="xl" fw="bold" className={styles["stage-number"]}>
               {stageNumber}
             </Text>
             <div className={styles.stars}>
