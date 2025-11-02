@@ -27,10 +27,6 @@ const meta: Meta<typeof NavigationButton> = {
       control: "boolean",
       description: "無効化状態",
     },
-    "aria-label": {
-      control: "text",
-      description: "アクセシビリティ用のラベル",
-    },
   },
 };
 

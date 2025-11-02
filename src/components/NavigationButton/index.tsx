@@ -12,6 +12,7 @@ export type NavigationButtonProps = Omit<
   className?: string;
   onClick?: MouseEventHandler<HTMLButtonElement>;
   disabled?: boolean;
+  "aria-label"?: string;
 };
 
 export const NavigationButton: FC<NavigationButtonProps> = ({
