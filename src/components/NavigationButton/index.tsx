@@ -1,15 +1,17 @@
 import { Button } from "@mantine/core";
 import clsx from "clsx";
-import type { ComponentPropsWithoutRef, FC } from "react";
+import type { ComponentProps, FC, MouseEventHandler } from "react";
 import type { IconType } from "react-icons";
 import styles from "./index.module.css";
 
 export type NavigationButtonProps = Omit<
-  ComponentPropsWithoutRef<typeof Button>,
+  ComponentProps<typeof Button>,
   "children"
 > & {
   icon: IconType;
   className?: string;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+  disabled?: boolean;
 };
 
 export const NavigationButton: FC<NavigationButtonProps> = ({

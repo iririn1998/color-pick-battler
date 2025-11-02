@@ -10,13 +10,7 @@ const Home: FC = () => {
     <AnimatedBackground>
       <AnimatedTitle>Color Pick Battler</AnimatedTitle>
       <Stack align="center" gap="md" w="100%" maw={180}>
-        <Button
-          component={Link}
-          href="/battle"
-          color="blue"
-          size="lg"
-          fullWidth
-        >
+        <Button component={Link} href="/stage" color="blue" size="lg" fullWidth>
           <Text>ステージセレクト</Text>
         </Button>
         <Button component={Link} href="/menu" color="green" size="lg" fullWidth>
